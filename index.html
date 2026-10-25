@@ -84,6 +84,7 @@ section{padding:78px 20px;scroll-margin-top:60px}.inner{max-width:960px;margin:a
 // To add a song: place an audio file in the project folder, e.g. music.mp3,
 // then change the line below to: document.getElementById('song').src = 'music.mp3';
 const song=document.getElementById('song'), musicBtn=document.getElementById('musicBtn');
+  song.src = 'music.mp3';
 musicBtn.addEventListener('click', async()=>{
  if(!song.src){musicBtn.textContent='♫ add music.mp3 first';return;}
  if(song.paused){try{await song.play();musicBtn.textContent='Ⅱ pause song';}catch(e){musicBtn.textContent='tap to play ♫';}}
